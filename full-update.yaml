@@ -1,0 +1,9 @@
+---
+- name: full update
+  hosts: all
+  become: true
+  tasks:
+    - name: update
+      yum:
+        name: '*'
+        state: latest
