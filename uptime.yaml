@@ -1,0 +1,10 @@
+---
+- name: security update
+  hosts: all
+  become: true
+  tasks:
+    - name: uptime
+      command: uptime
+      register: var_uptime
+    - debug:
+        var: var_uptime
